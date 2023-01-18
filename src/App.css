@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@font-face {
+  
+  font-family: "Audiowide-Regular";
+  src: url("../src/fonts/Audiowide-Regular.ttf") format("woff2")
+
+}
+@font-face {
+  font-family: "Rajdhani";
+  src: url("../src/fonts/Rajdhani-Bold.ttf") format("woff2");
+}
+
+
+
+body {
+  background-color:#F5F5F5;
+  
+}
+
+h1,
+h2{
+  font-family: "Audiowide-Regular";
+}
+
+p{
+  font-family: "Rajdhani";
+}
+
