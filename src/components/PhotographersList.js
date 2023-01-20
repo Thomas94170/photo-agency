@@ -1,35 +1,44 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import data from "../data/photographers.json";
 
 export const PhotographersList = () => {
-  const [photographers, setPhotographers] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await fetch("../data/photographers.json").then((res) =>
-          res.json()
-        );
-
-        console.log(res);
-        setPhotographers(res).then((res) => res.json());
-        return res;
-      } catch (err) {
-        console.error("erreur dans la construction " + err);
-      }
-    }
-    fetchData();
-  }, []);
-  console.log(photographers);
   return (
-    <div>
-      <h2 className="ml-10 mt-10 text-black flex justify-start text-lg">
+    <div className="m-10">
+      <h2 className="ml-10 mt-10 mb-10 text-black flex justify-start text-xl">
         Liste de nos Photographes
       </h2>
-      {photographers.map((photographer) => (
-        <div key={photographer.id}>
-          <h3>{photographer.name}</h3>
-        </div>
-      ))}
+      <div className="m-10 flex flex-col md:flex-row">
+        {data.photographers.map((photographer) => (
+          <div className="w-full md:w-1/3">
+            <div className="" key={photographer.id}>
+              <p className="text-center text-red-600 text-lg">
+                {photographer.name}
+              </p>
+              <div className="rounded-full border border-black m-3">
+                <div className="rounded-full border border-red-600 text-center m-1">
+                  <img
+                    src={photographer.portrait}
+                    alt={photographer.name}
+                    width={100}
+                    height={100}
+                  />
+                </div>
+              </div>
+              <p className="text-center text-black m-2">
+                {photographer.city} - {photographer.country}
+              </p>
+
+              <p className="text-center text-red-600">
+                Prix : {photographer.price}€
+              </p>
+
+              <p className="text-center text-black m-2">
+                {photographer.tagline}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
