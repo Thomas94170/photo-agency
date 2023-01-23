@@ -1,5 +1,6 @@
 import React from "react";
 import data from "../data/photographers.json";
+import { Link } from "react-router-dom";
 
 export const PhotographersList = () => {
   return (
@@ -14,14 +15,17 @@ export const PhotographersList = () => {
               <p className="text-center text-red-600 text-lg">
                 {photographer.name}
               </p>
-              <div className="rounded-full border border-black m-3">
-                <div className="rounded-full border border-red-600 text-center m-1">
-                  <img
-                    src={photographer.portrait}
-                    alt={photographer.name}
-                    width={100}
-                    height={100}
-                  />
+              <div className="m-3">
+                <div className="">
+                  <a href={photographer.id}>
+                    <img
+                      className="rounded-full border border-black text-center m-1"
+                      src={photographer.portrait}
+                      alt={photographer.name}
+                      width={"auto"}
+                      height={"auto"}
+                    />
+                  </a>
                 </div>
               </div>
               <p className="text-center text-black m-2">
