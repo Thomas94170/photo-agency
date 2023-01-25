@@ -15,7 +15,7 @@ export const Modal = () => {
     <>
       <button
         onClick={toggleModal}
-        className="border border-black rounded-full p-2 text-white bg-black shadow-xl shadow-gray-500/40 contactez"
+        className="border border-black rounded-full p-2 text-white bg-black shadow-xl shadow-gray-500/40 contactez evenement"
       >
         Contactez le photographe !
       </button>
