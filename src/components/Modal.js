@@ -30,7 +30,7 @@ export const Modal = () => {
             <div className="md:grid md:grid-cols-3 md:gap-6">
               <div className="md:col-span-1">
                 <h3 className="text-lg font-medium leading-6 text-gray-900">
-                  Information personnelle
+                  Informations personnelles
                 </h3>
                 <p className="mt-1 text-sm text-gray-500">
                   Renseignez votre adresse mail afin d'être contacté

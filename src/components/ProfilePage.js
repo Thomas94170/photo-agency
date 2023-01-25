@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../data/photographers.json";
 import profil from "../data/photographers.json";
+import { BackButton } from "./BackButton";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { Modal } from "./Modal";
@@ -13,6 +14,8 @@ export const ProfilePage = () => {
   return (
     <>
       <Header />
+
+      <BackButton />
       <div className="flex justify-center">
         <div className="">
           {data.photographers
@@ -52,7 +55,7 @@ export const ProfilePage = () => {
           .map((media) => (
             <div className="justify-self-center m-10">
               <div
-                className="hover:scale-150 transition duration-150 ease-out"
+                className="hover:scale-150 transition duration-300 ease-out"
                 key={media.photographerId}
               >
                 <p className="text-center text-black m-2">{media.title}</p>
@@ -67,6 +70,7 @@ export const ProfilePage = () => {
             </div>
           ))}
       </div>
+      <div className=""></div>
       <Footer />
     </>
   );
