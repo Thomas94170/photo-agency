@@ -9,7 +9,13 @@ function App() {
   return (
     <div className=" ">
       <Header />
-
+      <div className="mt-5">
+        <div className="flex justify-center text-black">
+          <p className=" italic text-2xl m-5">
+            La plateforme qui met en relation professionnels et futurs clients !{" "}
+          </p>
+        </div>
+      </div>
       <PhotographersList />
 
       <Footer />

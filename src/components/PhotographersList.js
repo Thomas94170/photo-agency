@@ -1,6 +1,5 @@
 import React from "react";
 import data from "../data/photographers.json";
-import { Link } from "react-router-dom";
 
 export const PhotographersList = () => {
   return (
